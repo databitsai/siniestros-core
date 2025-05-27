@@ -6,6 +6,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import java.math.BigDecimal;
 import java.time.ZonedDateTime;
+import java.util.List;
 import java.util.UUID;
 
 @Entity
@@ -34,6 +35,13 @@ public class Siniestro {
 
     @Column(name = "created_at")
     private ZonedDateTime createdAt;
+
+    private String tiempo;
+
+    @Transient
+    private List<Documento> documentos;
+
+    private String prioridad;
 
     @ManyToOne
     @JoinColumn(name = "id_tienda", referencedColumnName = "id")

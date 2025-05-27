@@ -39,8 +39,8 @@ class SiniestroServiceTest {
     @Test
     void testGetAllSiniestros() {
 
-        Siniestro s1 = new Siniestro(UUID.randomUUID(), ZonedDateTime.now(), new BigDecimal("1000"), "Robo", ZonedDateTime.now(), ZonedDateTime.now(), null);
-        Siniestro s2 = new Siniestro(UUID.randomUUID(), ZonedDateTime.now(), new BigDecimal("2000"), "Daño", ZonedDateTime.now(), ZonedDateTime.now(), null);
+        Siniestro s1 = new Siniestro(UUID.randomUUID(), ZonedDateTime.now(), new BigDecimal("1000"), "Robo", ZonedDateTime.now(), ZonedDateTime.now(), null, null, null, null);
+        Siniestro s2 = new Siniestro(UUID.randomUUID(), ZonedDateTime.now(), new BigDecimal("2000"), "Daño", ZonedDateTime.now(), ZonedDateTime.now(), null, null, null, null);
         List<Siniestro> siniestros = Arrays.asList(s1, s2);
 
         when(siniestroRepository.findAll()).thenReturn(siniestros);
