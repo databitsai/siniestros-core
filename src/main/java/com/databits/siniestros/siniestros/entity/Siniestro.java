@@ -18,7 +18,7 @@ public class Siniestro {
 
     @Id
     @GeneratedValue
-    private UUID id;
+    private String id;
 
     @Column(name = "hora_aproximada", nullable = false)
     private ZonedDateTime horaAproximada;

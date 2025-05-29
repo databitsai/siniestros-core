@@ -28,18 +28,19 @@ public class SiniestroController {
        // return siniestroService.getAllSiniestros();
 
         Tienda tienda = new Tienda();
-        tienda.setId(UUID.randomUUID());
+        tienda.setId("500");
         tienda.setNombre("Tienda Sur");
         tienda.setDireccion("Calle Sur 789");
         tienda.setCiudad("Guadalajara");
         tienda.setCodigoPostal("44100");
 
           Siniestro s1 = new Siniestro();
-        s1.setId(UUID.randomUUID());
+        s1.setId("S-00019");
         s1.setTienda(tienda);
         s1.setTipoSiniestro("Robo");
-        s1.setTiempo("2h 15m");
+        s1.setTiempo("7h 00m");
         s1.setPrioridad("Alta");
+        s1.setMontoEstimado(new BigDecimal(500));
         s1.setDocumentos(Arrays.asList(
             new Documento("Reporte Inicial", "Generado", "PDF"),
             new Documento("Declaración de Hechos", "Generado", "DOCX"),
@@ -49,11 +50,12 @@ public class SiniestroController {
 
         // Siniestro 2
         Siniestro s2 = new Siniestro();
-        s2.setId(UUID.randomUUID());
+        s2.setId("S-00018");
         s2.setTienda(tienda);
         s2.setTipoSiniestro("Daño");
         s2.setTiempo("5h 30m");
         s2.setPrioridad("Media");
+         s2.setMontoEstimado(new BigDecimal(10));
         s2.setDocumentos(Arrays.asList(
             new Documento("Reporte Inicial", "Generado", "PDF"),
             new Documento("Evaluación de Daños", "Generado", "DOCX"),
@@ -62,11 +64,12 @@ public class SiniestroController {
 
         // Siniestro 3
         Siniestro s3 = new Siniestro();
-        s3.setId(UUID.randomUUID());
+        s3.setId("S-00017");
         s3.setTienda(tienda);
         s3.setTipoSiniestro("Extravío");
         s3.setTiempo("8h 45m");
         s3.setPrioridad("Baja");
+         s3.setMontoEstimado(new BigDecimal(20));
         s3.setDocumentos(Arrays.asList(
             new Documento("Reporte Inicial", "Generado", "PDF"),
             new Documento("Lista de Elementos", "Generado", "XLSX")

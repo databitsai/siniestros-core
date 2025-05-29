@@ -21,7 +21,7 @@ public class Tienda {
 
     @Id
     @Column(name = "id", nullable = false)
-    private UUID id;
+    private String id;
 
     @Column(name = "nombre", nullable = false)
     private String nombre;
