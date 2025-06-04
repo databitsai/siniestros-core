@@ -74,7 +74,13 @@ public class SiniestroController {
             new Documento("Reporte Inicial", "Generado", "PDF"),
             new Documento("Lista de Elementos", "Generado", "XLSX")
         ));
+        
+        List<Siniestro> siniestros = siniestroService .getAllLLamadas();
+        
+        
+        System.out.println("Despues de convertir DTOS" + siniestros);
+    	System.out.println("*");
 
-        return Arrays.asList(s1, s2, s3);
+        return siniestros;
     }
 }
